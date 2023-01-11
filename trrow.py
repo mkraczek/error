@@ -25,15 +25,14 @@ for i in range (dl):
 
 
 def polet(p, trtab):
-    if p in trtab:
+    if p in trapeztab:
         return False
-    
-    P=0.5*abs((trtab[1][0]-trtab[0][0])*(trtab[2][1]-trtab[0][1])-(trtab[1][1]-trtab[0][1])*(trtab[2][0]-trtab[0][0]))
-    P1=0.5*abs((p[0]-trtab[0][0])*(trtab[1][1]-trtab[0][1])-(p[1]-trtab[0][1])*(trtab[1][0]-trtab[0][0]))
-    P2=0.5*abs((p[0]-trtab[1][0])*(trtab[2][1]-trtab[1][1])-(p[1]-trtab[1][1])*(trtab[2][0]-trtab[1][0]))
-    P3=0.5*abs((p[0]-trtab[0][0])*(trtab[2][1]-trtab[0][1])-(p[1]-trtab[0][1])*(trtab[2][0]-trtab[0][0]))
-    P4=32478327428374
-    if P==P1+P2+P3+P4+P5:
+    P1=0.5*abs((trapeztab[1][0]-trapeztab[0][0])*(p[1]-trapeztab[0][1])-(trapeztab[1][1]-trapeztab[0][1])*(p[0]-trapeztab[0][0]))
+    P2=0.5*abs((trapeztab[2][0]-trapeztab[1][0])*(p[1]-trapeztab[1][1])-(trapeztab[2][1]-trapeztab[1][1])*(p[0]-trapeztab[1][0]))
+    P3=0.5*abs((trapeztab[3][0]-trapeztab[2][0])*(p[1]-trapeztab[2][1])-(trapeztab[3][1]-trapeztab[2][1])*(p[0]-trapeztab[2][0]))
+    P4=0.5*abs((trapeztab[3][0]-trapeztab[0][0])*(p[1]-trapeztab[0][1])-(trapeztab[3][1]-trapeztab[0][1])*(p[0]-trapeztab[0][0]))
+    P=0.5*abs((abs(trapeztab[1][0]-trapeztab[0][0])+abs(trapeztab[2][0]-trapeztab[3][0]))*abs(trapeztab[3][1]-trapeztab[0][1]))
+    if P==P1+P2+P3+P4:
         return False
     else:
         return True
