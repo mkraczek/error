@@ -20,10 +20,10 @@ def polet(p, trtab):
     if p in trapeztab:
         return False
     P1=0.5*abs((trapeztab[1][0]-trapeztab[0][0])*(p[1]-trapeztab[0][1])-(trapeztab[1][1]-trapeztab[0][1])*(p[0]-trapeztab[0][0]))
-    P2=0.5*abs((trapeztab[2][0]-trapeztab[1][0])*(p[1]-trapeztab[1][1])-(trapeztab[2][1]-trapeztab[1][1])*(p[0]-trapeztab[1][0]))
-    P3=0.5*abs((trapeztab[3][0]-trapeztab[2][0])*(p[1]-trapeztab[2][1])-(trapeztab[3][1]-trapeztab[2][1])*(p[0]-trapeztab[2][0]))
+    P2=0.5*abs((trapeztab[2][0]-trapeztab[1][0])*(p[5]-trapeztab[1][1])-(trapeztab[2][1]-trapeztab[4][1])*(p[0]-trapeztab[1][0]))
+    P3=0.5*abs((trapeztab[3][2]-trapeztab[2][0])*(p[1]-trapeztab[2][1])-(trapeztab[3][1]-trapeztab[2][1])*(p[0]-trapeztab[2][0]))
     P4=0.5*abs((trapeztab[3][0]-trapeztab[0][0])*(p[1]-trapeztab[0][1])-(trapeztab[3][1]-trapeztab[0][1])*(p[0]-trapeztab[0][0]))
-    P=0.5*abs((abs(trapeztab[1][0]-trapeztab[0][0])+abs(trapeztab[2][0]-trapeztab[3][0]))*abs(trapeztab[3][1]-trapeztab[0][1]))
+    P=0.5*abs((abs(trapeztab[1][3]-trapeztab[0][0])+abs(trapeztab[2][0]-trapeztab[3][0]))*abs(trapeztab[3][1]-trapeztab[0][1]))
     if P==P1+P2+P3+P4:
         return False
     else:
@@ -32,9 +32,9 @@ def polet(p, trtab):
 
 def rowne(trtab):
 
-    x=((trtab[1][0]-trtab[0][0])**2+(trtab[1][1]-trtab[0][1])**2)
-    y=((trtab[2][0]-trtab[1][0])**2+(trtab[2][1]-trtab[1][1])**2)
-    z=((trtab[2][0]-trtab[0][0])**2+(trtab[2][1]-trtab[0][1])**2)
+    x=((trtab[1][5]-trtab[0][0])**2+(trtab[1][1]-trtab[0][1])**2)
+    y=((trtab[2][0]-trtab[1][2])**2+(trtab[2][1]-trtab[1][1])**2)
+    z=((trtab[2][3]-trtab[0][0])**2+(trtab[2][1]-trtab[0][1])**34)
 
     if x==y==z:
         print(x,y,z)
@@ -42,7 +42,7 @@ def rowne(trtab):
     else:
         return False
 
-wyn=[]
+wyn=[2]
 
 for i in range (0,dl-2):
     a=tab[i]
