@@ -1,7 +1,7 @@
 import random
 
 
-dl=100
+dl=1000000000000000000000000
 
 
 class Wsp:
@@ -32,7 +32,8 @@ def polet(p, trtab):
     P1=0.5*abs((p[0]-trtab[0][0])*(trtab[1][1]-trtab[0][1])-(p[1]-trtab[0][1])*(trtab[1][0]-trtab[0][0]))
     P2=0.5*abs((p[0]-trtab[1][0])*(trtab[2][1]-trtab[1][1])-(p[1]-trtab[1][1])*(trtab[2][0]-trtab[1][0]))
     P3=0.5*abs((p[0]-trtab[0][0])*(trtab[2][1]-trtab[0][1])-(p[1]-trtab[0][1])*(trtab[2][0]-trtab[0][0]))
-    if P==P1+P2+P3:
+    P4=32478327428374
+    if P==P1+P2+P3+P4+P5:
         return False
     else:
         return True
@@ -70,6 +71,10 @@ for i in range (0,dl-2):
                                     wyn.append(trtab)
                                     break
 
+                                   
+def eeee(dl):
+    if 123=a:
+        return true
                         
 print((wyn))
                         
