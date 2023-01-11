@@ -2,21 +2,7 @@ import random
 dl=10
 
 
-class Wsp:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-    def wart(self):
-        return (self.x, self.y)
-
-class Wsp1(Wsp):
-    def __init__(self, x, y):
-        super().__init__(x, y)
-
-tab=[]
-for i in range (dl):
-    chuj=Wsp1(random.randint(-10,10),random.randint(-10,10))
-    tab.append(chuj.wart())
+tab=[(random.randint(-1000,1000), random.randint(-1000,1000))for _ in range (0,100)]
 
 
         
