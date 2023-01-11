@@ -2,7 +2,7 @@ import random
 dl=10
 
 
-tab=[(random.randint(-1000,1000), random.randint(-1000,1000))for _ in range (0,100)]
+tab=[(random.randint(-10,10), random.randint(-10,10))for _ in range dl]
 
 
         
