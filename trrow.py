@@ -1,5 +1,7 @@
 import random
-dl=10
+
+
+dl=100
 
 
 class Wsp:
