@@ -4,24 +4,16 @@ import random
 dl=1000000000000000000000000
 
 
-class Wsp:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-    def wart(self):
-        return (self.x, self.y)
-
-class Wsp1(Wsp):
-    def __init__(self, x, y):
-        super().__init__(x, y)
-
-tab=[]
-for i in range (dl):
-    chuj=Wsp1(random.randint(-10,10),random.randint(-10,10))
-    tab.append(chuj.wart())
+tab=[(random.randint(-10,10), random.randint(-10,10))for _ in range dl]
 
 
-        
+a=3242
+b=324235412
+c=32423442
+d=324254246523
+g=234234
+f=2343224
+h=235432456623232432643546352432534324543532454365435
 
 
 def polet(p, trtab):
